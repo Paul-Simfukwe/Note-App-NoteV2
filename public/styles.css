@@ -1,0 +1,174 @@
+/* General Reset and Basic Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #eee;
+  padding: 0 16px;
+}
+
+header {
+  background-color: #18dcff;
+  margin: auto -16px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  color: #fff;
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+}
+
+footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+footer p {
+  color: #ff4757;
+}
+
+.note {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 240px;
+  margin: 16px;
+  float: left;
+  position: relative; /* Enable absolute positioning for children */
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.note h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.note .date {
+  font-size: 0.9em;
+  color: #888; /* Light grey color for date */
+  margin: 0; /* Remove margin */
+  font-style: italic;
+}
+
+.note button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: #18dcff;
+  border: none;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  outline: none;
+}
+
+form {
+  position: relative;
+  width: 480px;
+  margin: 30px auto 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+
+form button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: #18dcff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and Smaller Desktops */
+@media (max-width: 768px) {
+  .note {
+    width: 45%; /* Adjust the width for smaller screens */
+    margin: 16px auto; /* Center the notes */
+    float: none; /* Remove float for better alignment */
+  }
+
+  form {
+    width: 80%; /* Make the form width more flexible */
+  }
+
+  header h1 {
+    font-size: 1.8em; /* Slightly smaller header text */
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+  .note {
+    width: 100%; /* Full width on mobile */
+    margin: 8px 0; /* Reduce margins on mobile */
+    float: none;
+  }
+
+  form {
+    width: 100%; /* Full width on mobile */
+    margin: 20px 0; /* Adjust form margins */
+  }
+
+  form button {
+    right: 10px; /* Adjust button position */
+    bottom: -15px;
+  }
+
+  header {
+    padding: 12px 16px; /* Adjust header padding */
+  }
+
+  header h1 {
+    font-size: 1.6em; /* Smaller header text */
+  }
+
+  footer p {
+    font-size: 0.9em; /* Smaller footer text */
+  }
+}
